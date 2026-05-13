@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.popspot.app-mergeDebugResources-67:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\xuxta\\.gradle\\caches\\transforms-4\\593b2cc918dcf39ac8578a13a5ac4d1a\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    }
+                }
+            ]
+        }
+    ]
+}

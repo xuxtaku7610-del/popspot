@@ -1,0 +1,9 @@
+package com.popspot.app.data.remote.api;
+
+@kotlin.Metadata(k = 1, mv = {2, 0, 0}, d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000E\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0004\u0008f\u0012\u0001\u0000\u0018\u0000J<\u0010\u00022\u0006\u0008\u0003\u0010\u0004(\u00022\u0006\u0008\u0003\u0010\u0006(\u00022\u0006\u0008\u0001\u0010\u0007(\u00022\u0006\u0008\u0003\u0010\u0008(\u00032\u0006\u0008\u0003\u0010\n(\u00032\u0006\u0008\u0003\u0010\u000B(\u00028\u0001H\u00A7@\u00A2\u0006\u0002\u0010\u000C\u00F2\u0001\u0010\n\u00020\u0001\n\u00020\u0003\n\u00020\u0005\n\u00020\t\u00A8\u0006\r"}, d2 = {"Lcom/popspot/app/data/remote/api/NaverBlogApi;", "", "searchBlog", "Lcom/popspot/app/data/remote/dto/NaverBlogResponse;", "clientId", "", "clientSecret", "query", "display", "", "start", "sort", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "app_debug"}, xs= "", pn = "", xi = 48)
+public abstract interface NaverBlogApi {
+
+    @retrofit2.http.GET(value = "v1/search/blog.json")
+    @org.jetbrains.annotations.Nullable()
+    public abstract java.lang.Object searchBlog(@retrofit2.http.Header(value = "X-Naver-Client-Id") @org.jetbrains.annotations.NotNull() java.lang.String clientId, @retrofit2.http.Header(value = "X-Naver-Client-Secret") @org.jetbrains.annotations.NotNull() java.lang.String clientSecret, @retrofit2.http.Query(value = "query") @org.jetbrains.annotations.NotNull() java.lang.String query, @retrofit2.http.Query(value = "display") int display, @retrofit2.http.Query(value = "start") int start, @retrofit2.http.Query(value = "sort") @org.jetbrains.annotations.NotNull() java.lang.String sort, @org.jetbrains.annotations.NotNull() kotlin.coroutines.Continuation<? super com.popspot.app.data.remote.dto.NaverBlogResponse> $completion);
+}

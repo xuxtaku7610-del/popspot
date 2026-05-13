@@ -1,0 +1,532 @@
+-- Merging decision tree log ---
+meta-data#com.naver.maps.map.CLIENT_ID
+INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml:16:9-18:51
+	android:value
+		INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:18:13-48
+	android:name
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:17:13-56
+manifest
+ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml:2:1-31:12
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\xuxta\.gradle\caches\transforms-4\17f603ae7748e091ec95565735a8c5c1\transformed\hilt-navigation-compose-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\xuxta\.gradle\caches\transforms-4\493943290a4e7d7a40357dd32b7b224a\transformed\hilt-navigation-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\8398319f69380f259a197c6bcb5cd33c\transformed\navigation-common-2.7.7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\a2a5e6f252c6d0293e0156f3fdd3bfc8\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\5023d820968380c28c37d993e541e1e6\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\d68b6159b1115f6eb11e4a3779aeaabc\transformed\navigation-runtime-ktx-2.7.7\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\f04602bd5d69425d26e83c9c67115a19\transformed\navigation-compose-2.7.7\AndroidManifest.xml:2:1-7:12
+MERGED from [io.github.fornewid:naver-map-compose:1.7.2] C:\Users\xuxta\.gradle\caches\transforms-4\3867458a63df50061968c109bd48e547\transformed\naver-map-compose-1.7.2\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.accompanist:accompanist-permissions:0.35.0-alpha] C:\Users\xuxta\.gradle\caches\transforms-4\ecec9988938b33cafc26de1b36e99368\transformed\accompanist-permissions-0.35.0-alpha\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.compose.material3:material3-android:1.2.1] C:\Users\xuxta\.gradle\caches\transforms-4\84ee7ec66c724e2510e2b8ceacb025e6\transformed\material3-release\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:hilt-android:2.51] C:\Users\xuxta\.gradle\caches\transforms-4\195b0504c55c827e23fe08a7045268e7\transformed\hilt-android-2.51\AndroidManifest.xml:16:1-19:12
+MERGED from [io.github.fornewid:naver-map-location:21.0.1] C:\Users\xuxta\.gradle\caches\transforms-4\2287c3858c3d93d545409ca5391f6f1b\transformed\naver-map-location-21.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\xuxta\.gradle\caches\transforms-4\6607bd8378bb19aaed2c3aa89036c60e\transformed\play-services-location-21.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d1225a798ddf76f12ec974b05d95ff4e\transformed\play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\xuxta\.gradle\caches\transforms-4\c35b7b8349697d36ed5b1c85c84031cd\transformed\play-services-tasks-18.0.2\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\b415f430f033ee414d0e87a636ae7add\transformed\play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
+MERGED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:2:1-36:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\2e666259aef4ad739ce1c437bf7105ef\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\593b2cc918dcf39ac8578a13a5ac4d1a\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\xuxta\.gradle\caches\transforms-4\2170cb4e6a684eca9ca22c5ae52796e3\transformed\fragment-1.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\9ad16ae9bd0c2f6afda611435b71ba3f\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\6c69f528d2896c2f61b57b7a366f70ff\transformed\material-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\9e16770436c863e51bda7cba8b7123af\transformed\material-icons-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\e49ad8c5d218dd021b06f706f99f71b7\transformed\material-icons-extended-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\f371d57ae762bd88bbbd2640480860fb\transformed\material-ripple-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\b442efdf2c4b5e06457e36b205c99d92\transformed\animation-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\7451386fa2fa90da2d8bb6825121b5bb\transformed\animation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\261bc8d4cb8cc7aef936b315e9158abc\transformed\foundation-layout-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\5dc2e531d8bca073c594629496c3c627\transformed\foundation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\17d90c34f8b04fcf7f91c85a69a8abd5\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\a22cdc0075491ef38994c5f726175027\transformed\ui-tooling-data-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\4108d8280400936d89da57dddd03bf67\transformed\ui-tooling-preview-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\b38f59318daba7b47e198b22644c2361\transformed\ui-geometry-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\5890f247a03ce192e57a997789f5ed6f\transformed\ui-unit-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\c4c4a71dad543482dbb27ee65c8b6248\transformed\ui-util-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\e441df99ec2801f68178db68512812e0\transformed\ui-graphics-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\65e01b29181bf8a2e33983fc9d2060b5\transformed\ui-text-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\9291ab460c7b6b70435912cbe1958c01\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\7e1001d335e3cd0594db28a1cfffe249\transformed\lifecycle-process-2.8.1\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\0541c1d49b7b481085bb89c63180c134\transformed\lifecycle-livedata-core-ktx-2.8.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\9a3e10a549177b1c7b4d5e3d649c5a9d\transformed\lifecycle-livedata-2.8.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\60cb59eda5e8b671e090e37399279ce2\transformed\lifecycle-viewmodel-2.8.1\AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\f18b596905069bc55a8347f9359066d7\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\xuxta\.gradle\caches\transforms-4\3f00e3910b518520a581d62e63e9382b\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\xuxta\.gradle\caches\transforms-4\033eb36a8a76c100c6c65fd1b5bbea58\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\e4fbbbcf49ad1561ef1562030687c1b4\transformed\lifecycle-runtime-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\0df3b03b721a496de1c60b524838a520\transformed\lifecycle-livedata-core-2.8.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\26d02c529d38117bc743c3e8e3c652ed\transformed\lifecycle-viewmodel-ktx-2.8.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\47ab12722f78c1d3d8a5b82fe4978d3a\transformed\lifecycle-viewmodel-savedstate-2.8.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\5907813c2399973b47bab1beef76b1c5\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\fcc2667947ee063a03a9adb23a75c0b5\transformed\lifecycle-viewmodel-compose-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\bf298c01745a882ec860a5a086441e1a\transformed\ui-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\c71e95563bc016c615dad862bd4f26a1\transformed\ui-tooling-release\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.activity:activity-compose:1.9.0] C:\Users\xuxta\.gradle\caches\transforms-4\d11f2a222e116b1a88af815e329ddd28\transformed\activity-compose-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.9.0] C:\Users\xuxta\.gradle\caches\transforms-4\14f42d1ce70306e94c2372998edb1014\transformed\activity-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.9.0] C:\Users\xuxta\.gradle\caches\transforms-4\2cf7e14510b8c0bf943881aead0c985a\transformed\activity-1.9.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\1122a147d33c060f12737309289cd148\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\xuxta\.gradle\caches\transforms-4\d49dffd5eab8704dc0b8565e2f41dfd9\transformed\recyclerview-1.3.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d64787abb67dda411b34a8c9ffdb26d3\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\0c5d88e856aa6396768def6f03924f0b\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\aa9399a4cc186018bb7907d2363d3ddc\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\006e8c9ffcf3d043b9854c05d291fd86\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\7ac62fc119533b0ebafc638a54a2a2e9\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\4bf746e675cf6b204c00ac1fd235b66d\transformed\autofill-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.graphics:graphics-path:1.0.0-beta02] C:\Users\xuxta\.gradle\caches\transforms-4\882888383018e9434bc60881f8f71f4e\transformed\graphics-path-1.0.0-beta02\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\6c60e9c008e7d6a94a3d9b2850f1f4c3\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\eb0ab10417d4a40ef00b5e438be1632a\transformed\core-ktx-1.13.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\7bf7f185e1f2b3d7d32f1e7d59417487\transformed\room-runtime-2.6.1\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\c74efa63eec2c6e947e066a13a3ce1a2\transformed\room-ktx-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\1d67cb51d7d8176808b8a49ac413813b\transformed\runtime-saveable-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\6a34bec6296fac95985150346f17d232\transformed\runtime-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\xuxta\.gradle\caches\transforms-4\1b97a3093042ad13a61efb5f88675e4f\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\xuxta\.gradle\caches\transforms-4\1d5d8397a8647fa47a92c93d510446fb\transformed\sqlite-2.4.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\xuxta\.gradle\caches\transforms-4\2469bea41381e4afa7d991adb0025eeb\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\xuxta\.gradle\caches\transforms-4\3cbd86b8dfd42827403b9cc606cbccf0\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\5f32731b363c23f185c50b900c18fe3e\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\ff55dbb94b5024dd50ac26dc1ead1c99\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [com.naver.maps:geometry:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d52f23bafd80bdbcd62fb638d70cd42a\transformed\geometry-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\e6bfc4bed98439f3518bfd18446d4294\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\3770993a5857f619b53cf69e17d718e6\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\f7eb4cff5e782d0d981b75051f444fc3\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.51] C:\Users\xuxta\.gradle\caches\transforms-4\4d79dd9fc0c97548c89dd19d939463d4\transformed\dagger-lint-aar-2.51\AndroidManifest.xml:16:1-19:12
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.4] C:\Users\xuxta\.gradle\caches\transforms-4\0addc0b6a9238aac843f3e7ce5ee3f8a\transformed\relinker-1.4.4\AndroidManifest.xml:2:1-7:12
+	package
+		INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:4:5-67
+MERGED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:14:5-67
+MERGED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:14:5-67
+	android:name
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:6:22-78
+application
+ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:8:5-29:19
+INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml:8:5-29:19
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\xuxta\.gradle\caches\transforms-4\6607bd8378bb19aaed2c3aa89036c60e\transformed\play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\xuxta\.gradle\caches\transforms-4\6607bd8378bb19aaed2c3aa89036c60e\transformed\play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d1225a798ddf76f12ec974b05d95ff4e\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d1225a798ddf76f12ec974b05d95ff4e\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\xuxta\.gradle\caches\transforms-4\c35b7b8349697d36ed5b1c85c84031cd\transformed\play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\xuxta\.gradle\caches\transforms-4\c35b7b8349697d36ed5b1c85c84031cd\transformed\play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\b415f430f033ee414d0e87a636ae7add\transformed\play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\b415f430f033ee414d0e87a636ae7add\transformed\play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:18:5-34:19
+MERGED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:18:5-34:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\7e1001d335e3cd0594db28a1cfffe249\transformed\lifecycle-process-2.8.1\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\7e1001d335e3cd0594db28a1cfffe249\transformed\lifecycle-process-2.8.1\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\c71e95563bc016c615dad862bd4f26a1\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\c71e95563bc016c615dad862bd4f26a1\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\7bf7f185e1f2b3d7d32f1e7d59417487\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\7bf7f185e1f2b3d7d32f1e7d59417487\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\ff55dbb94b5024dd50ac26dc1ead1c99\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\ff55dbb94b5024dd50ac26dc1ead1c99\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\e6bfc4bed98439f3518bfd18446d4294\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\e6bfc4bed98439f3518bfd18446d4294\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:11:9-41
+	android:allowBackup
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:10:9-35
+	android:theme
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:13:9-45
+	android:name
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:9:9-43
+activity#com.popspot.app.MainActivity
+ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:20:9-28:20
+	android:exported
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:22:13-36
+	android:theme
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:23:13-49
+	android:name
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:21:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:24:13-27:29
+action#android.intent.action.MAIN
+ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from D:\PopSpot\app\src\main\AndroidManifest.xml:26:27-74
+uses-sdk
+INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml
+INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\xuxta\.gradle\caches\transforms-4\17f603ae7748e091ec95565735a8c5c1\transformed\hilt-navigation-compose-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\xuxta\.gradle\caches\transforms-4\17f603ae7748e091ec95565735a8c5c1\transformed\hilt-navigation-compose-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\xuxta\.gradle\caches\transforms-4\493943290a4e7d7a40357dd32b7b224a\transformed\hilt-navigation-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\xuxta\.gradle\caches\transforms-4\493943290a4e7d7a40357dd32b7b224a\transformed\hilt-navigation-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\8398319f69380f259a197c6bcb5cd33c\transformed\navigation-common-2.7.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\8398319f69380f259a197c6bcb5cd33c\transformed\navigation-common-2.7.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\a2a5e6f252c6d0293e0156f3fdd3bfc8\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\a2a5e6f252c6d0293e0156f3fdd3bfc8\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\5023d820968380c28c37d993e541e1e6\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\5023d820968380c28c37d993e541e1e6\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\d68b6159b1115f6eb11e4a3779aeaabc\transformed\navigation-runtime-ktx-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\d68b6159b1115f6eb11e4a3779aeaabc\transformed\navigation-runtime-ktx-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\f04602bd5d69425d26e83c9c67115a19\transformed\navigation-compose-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.7] C:\Users\xuxta\.gradle\caches\transforms-4\f04602bd5d69425d26e83c9c67115a19\transformed\navigation-compose-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [io.github.fornewid:naver-map-compose:1.7.2] C:\Users\xuxta\.gradle\caches\transforms-4\3867458a63df50061968c109bd48e547\transformed\naver-map-compose-1.7.2\AndroidManifest.xml:5:5-44
+MERGED from [io.github.fornewid:naver-map-compose:1.7.2] C:\Users\xuxta\.gradle\caches\transforms-4\3867458a63df50061968c109bd48e547\transformed\naver-map-compose-1.7.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.accompanist:accompanist-permissions:0.35.0-alpha] C:\Users\xuxta\.gradle\caches\transforms-4\ecec9988938b33cafc26de1b36e99368\transformed\accompanist-permissions-0.35.0-alpha\AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-permissions:0.35.0-alpha] C:\Users\xuxta\.gradle\caches\transforms-4\ecec9988938b33cafc26de1b36e99368\transformed\accompanist-permissions-0.35.0-alpha\AndroidManifest.xml:21:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.1] C:\Users\xuxta\.gradle\caches\transforms-4\84ee7ec66c724e2510e2b8ceacb025e6\transformed\material3-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.1] C:\Users\xuxta\.gradle\caches\transforms-4\84ee7ec66c724e2510e2b8ceacb025e6\transformed\material3-release\AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:hilt-android:2.51] C:\Users\xuxta\.gradle\caches\transforms-4\195b0504c55c827e23fe08a7045268e7\transformed\hilt-android-2.51\AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.51] C:\Users\xuxta\.gradle\caches\transforms-4\195b0504c55c827e23fe08a7045268e7\transformed\hilt-android-2.51\AndroidManifest.xml:18:3-42
+MERGED from [io.github.fornewid:naver-map-location:21.0.1] C:\Users\xuxta\.gradle\caches\transforms-4\2287c3858c3d93d545409ca5391f6f1b\transformed\naver-map-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [io.github.fornewid:naver-map-location:21.0.1] C:\Users\xuxta\.gradle\caches\transforms-4\2287c3858c3d93d545409ca5391f6f1b\transformed\naver-map-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\xuxta\.gradle\caches\transforms-4\6607bd8378bb19aaed2c3aa89036c60e\transformed\play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\xuxta\.gradle\caches\transforms-4\6607bd8378bb19aaed2c3aa89036c60e\transformed\play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d1225a798ddf76f12ec974b05d95ff4e\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d1225a798ddf76f12ec974b05d95ff4e\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\xuxta\.gradle\caches\transforms-4\c35b7b8349697d36ed5b1c85c84031cd\transformed\play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\xuxta\.gradle\caches\transforms-4\c35b7b8349697d36ed5b1c85c84031cd\transformed\play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\b415f430f033ee414d0e87a636ae7add\transformed\play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\b415f430f033ee414d0e87a636ae7add\transformed\play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:5:5-44
+MERGED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\2e666259aef4ad739ce1c437bf7105ef\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\2e666259aef4ad739ce1c437bf7105ef\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\593b2cc918dcf39ac8578a13a5ac4d1a\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\593b2cc918dcf39ac8578a13a5ac4d1a\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\xuxta\.gradle\caches\transforms-4\2170cb4e6a684eca9ca22c5ae52796e3\transformed\fragment-1.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\xuxta\.gradle\caches\transforms-4\2170cb4e6a684eca9ca22c5ae52796e3\transformed\fragment-1.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\9ad16ae9bd0c2f6afda611435b71ba3f\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\9ad16ae9bd0c2f6afda611435b71ba3f\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\6c69f528d2896c2f61b57b7a366f70ff\transformed\material-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\6c69f528d2896c2f61b57b7a366f70ff\transformed\material-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\9e16770436c863e51bda7cba8b7123af\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\9e16770436c863e51bda7cba8b7123af\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\e49ad8c5d218dd021b06f706f99f71b7\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\e49ad8c5d218dd021b06f706f99f71b7\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\f371d57ae762bd88bbbd2640480860fb\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.7] C:\Users\xuxta\.gradle\caches\transforms-4\f371d57ae762bd88bbbd2640480860fb\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\b442efdf2c4b5e06457e36b205c99d92\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\b442efdf2c4b5e06457e36b205c99d92\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\7451386fa2fa90da2d8bb6825121b5bb\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\7451386fa2fa90da2d8bb6825121b5bb\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\261bc8d4cb8cc7aef936b315e9158abc\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\261bc8d4cb8cc7aef936b315e9158abc\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\5dc2e531d8bca073c594629496c3c627\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\5dc2e531d8bca073c594629496c3c627\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\17d90c34f8b04fcf7f91c85a69a8abd5\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\17d90c34f8b04fcf7f91c85a69a8abd5\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\a22cdc0075491ef38994c5f726175027\transformed\ui-tooling-data-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\a22cdc0075491ef38994c5f726175027\transformed\ui-tooling-data-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\4108d8280400936d89da57dddd03bf67\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\4108d8280400936d89da57dddd03bf67\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\b38f59318daba7b47e198b22644c2361\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\b38f59318daba7b47e198b22644c2361\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\5890f247a03ce192e57a997789f5ed6f\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\5890f247a03ce192e57a997789f5ed6f\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\c4c4a71dad543482dbb27ee65c8b6248\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\c4c4a71dad543482dbb27ee65c8b6248\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\e441df99ec2801f68178db68512812e0\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\e441df99ec2801f68178db68512812e0\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\65e01b29181bf8a2e33983fc9d2060b5\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\65e01b29181bf8a2e33983fc9d2060b5\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\9291ab460c7b6b70435912cbe1958c01\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\9291ab460c7b6b70435912cbe1958c01\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\7e1001d335e3cd0594db28a1cfffe249\transformed\lifecycle-process-2.8.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\7e1001d335e3cd0594db28a1cfffe249\transformed\lifecycle-process-2.8.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\0541c1d49b7b481085bb89c63180c134\transformed\lifecycle-livedata-core-ktx-2.8.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\0541c1d49b7b481085bb89c63180c134\transformed\lifecycle-livedata-core-ktx-2.8.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\9a3e10a549177b1c7b4d5e3d649c5a9d\transformed\lifecycle-livedata-2.8.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\9a3e10a549177b1c7b4d5e3d649c5a9d\transformed\lifecycle-livedata-2.8.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\60cb59eda5e8b671e090e37399279ce2\transformed\lifecycle-viewmodel-2.8.1\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\60cb59eda5e8b671e090e37399279ce2\transformed\lifecycle-viewmodel-2.8.1\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\f18b596905069bc55a8347f9359066d7\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\f18b596905069bc55a8347f9359066d7\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\xuxta\.gradle\caches\transforms-4\3f00e3910b518520a581d62e63e9382b\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\xuxta\.gradle\caches\transforms-4\3f00e3910b518520a581d62e63e9382b\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\xuxta\.gradle\caches\transforms-4\033eb36a8a76c100c6c65fd1b5bbea58\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\xuxta\.gradle\caches\transforms-4\033eb36a8a76c100c6c65fd1b5bbea58\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\e4fbbbcf49ad1561ef1562030687c1b4\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\e4fbbbcf49ad1561ef1562030687c1b4\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\0df3b03b721a496de1c60b524838a520\transformed\lifecycle-livedata-core-2.8.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\0df3b03b721a496de1c60b524838a520\transformed\lifecycle-livedata-core-2.8.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\26d02c529d38117bc743c3e8e3c652ed\transformed\lifecycle-viewmodel-ktx-2.8.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\26d02c529d38117bc743c3e8e3c652ed\transformed\lifecycle-viewmodel-ktx-2.8.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\47ab12722f78c1d3d8a5b82fe4978d3a\transformed\lifecycle-viewmodel-savedstate-2.8.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\47ab12722f78c1d3d8a5b82fe4978d3a\transformed\lifecycle-viewmodel-savedstate-2.8.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\5907813c2399973b47bab1beef76b1c5\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\5907813c2399973b47bab1beef76b1c5\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\fcc2667947ee063a03a9adb23a75c0b5\transformed\lifecycle-viewmodel-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\fcc2667947ee063a03a9adb23a75c0b5\transformed\lifecycle-viewmodel-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\bf298c01745a882ec860a5a086441e1a\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\bf298c01745a882ec860a5a086441e1a\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\c71e95563bc016c615dad862bd4f26a1\transformed\ui-tooling-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\c71e95563bc016c615dad862bd4f26a1\transformed\ui-tooling-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.9.0] C:\Users\xuxta\.gradle\caches\transforms-4\d11f2a222e116b1a88af815e329ddd28\transformed\activity-compose-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.9.0] C:\Users\xuxta\.gradle\caches\transforms-4\d11f2a222e116b1a88af815e329ddd28\transformed\activity-compose-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.0] C:\Users\xuxta\.gradle\caches\transforms-4\14f42d1ce70306e94c2372998edb1014\transformed\activity-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.0] C:\Users\xuxta\.gradle\caches\transforms-4\14f42d1ce70306e94c2372998edb1014\transformed\activity-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.9.0] C:\Users\xuxta\.gradle\caches\transforms-4\2cf7e14510b8c0bf943881aead0c985a\transformed\activity-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.0] C:\Users\xuxta\.gradle\caches\transforms-4\2cf7e14510b8c0bf943881aead0c985a\transformed\activity-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\1122a147d33c060f12737309289cd148\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\1122a147d33c060f12737309289cd148\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\xuxta\.gradle\caches\transforms-4\d49dffd5eab8704dc0b8565e2f41dfd9\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\xuxta\.gradle\caches\transforms-4\d49dffd5eab8704dc0b8565e2f41dfd9\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d64787abb67dda411b34a8c9ffdb26d3\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d64787abb67dda411b34a8c9ffdb26d3\transformed\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\0c5d88e856aa6396768def6f03924f0b\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\0c5d88e856aa6396768def6f03924f0b\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\aa9399a4cc186018bb7907d2363d3ddc\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\aa9399a4cc186018bb7907d2363d3ddc\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\006e8c9ffcf3d043b9854c05d291fd86\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\006e8c9ffcf3d043b9854c05d291fd86\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\7ac62fc119533b0ebafc638a54a2a2e9\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\7ac62fc119533b0ebafc638a54a2a2e9\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\4bf746e675cf6b204c00ac1fd235b66d\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\4bf746e675cf6b204c00ac1fd235b66d\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.graphics:graphics-path:1.0.0-beta02] C:\Users\xuxta\.gradle\caches\transforms-4\882888383018e9434bc60881f8f71f4e\transformed\graphics-path-1.0.0-beta02\AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.0-beta02] C:\Users\xuxta\.gradle\caches\transforms-4\882888383018e9434bc60881f8f71f4e\transformed\graphics-path-1.0.0-beta02\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\6c60e9c008e7d6a94a3d9b2850f1f4c3\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\6c60e9c008e7d6a94a3d9b2850f1f4c3\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\eb0ab10417d4a40ef00b5e438be1632a\transformed\core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\eb0ab10417d4a40ef00b5e438be1632a\transformed\core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\7bf7f185e1f2b3d7d32f1e7d59417487\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\7bf7f185e1f2b3d7d32f1e7d59417487\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\c74efa63eec2c6e947e066a13a3ce1a2\transformed\room-ktx-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\c74efa63eec2c6e947e066a13a3ce1a2\transformed\room-ktx-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\1d67cb51d7d8176808b8a49ac413813b\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\1d67cb51d7d8176808b8a49ac413813b\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\6a34bec6296fac95985150346f17d232\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\6a34bec6296fac95985150346f17d232\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\xuxta\.gradle\caches\transforms-4\1b97a3093042ad13a61efb5f88675e4f\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\xuxta\.gradle\caches\transforms-4\1b97a3093042ad13a61efb5f88675e4f\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\xuxta\.gradle\caches\transforms-4\1d5d8397a8647fa47a92c93d510446fb\transformed\sqlite-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\xuxta\.gradle\caches\transforms-4\1d5d8397a8647fa47a92c93d510446fb\transformed\sqlite-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\xuxta\.gradle\caches\transforms-4\2469bea41381e4afa7d991adb0025eeb\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\xuxta\.gradle\caches\transforms-4\2469bea41381e4afa7d991adb0025eeb\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\xuxta\.gradle\caches\transforms-4\3cbd86b8dfd42827403b9cc606cbccf0\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\xuxta\.gradle\caches\transforms-4\3cbd86b8dfd42827403b9cc606cbccf0\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\5f32731b363c23f185c50b900c18fe3e\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\5f32731b363c23f185c50b900c18fe3e\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\ff55dbb94b5024dd50ac26dc1ead1c99\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\ff55dbb94b5024dd50ac26dc1ead1c99\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.naver.maps:geometry:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d52f23bafd80bdbcd62fb638d70cd42a\transformed\geometry-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [com.naver.maps:geometry:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d52f23bafd80bdbcd62fb638d70cd42a\transformed\geometry-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\e6bfc4bed98439f3518bfd18446d4294\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\e6bfc4bed98439f3518bfd18446d4294\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\3770993a5857f619b53cf69e17d718e6\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\3770993a5857f619b53cf69e17d718e6\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\f7eb4cff5e782d0d981b75051f444fc3\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\xuxta\.gradle\caches\transforms-4\f7eb4cff5e782d0d981b75051f444fc3\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-lint-aar:2.51] C:\Users\xuxta\.gradle\caches\transforms-4\4d79dd9fc0c97548c89dd19d939463d4\transformed\dagger-lint-aar-2.51\AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.51] C:\Users\xuxta\.gradle\caches\transforms-4\4d79dd9fc0c97548c89dd19d939463d4\transformed\dagger-lint-aar-2.51\AndroidManifest.xml:18:3-42
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.4] C:\Users\xuxta\.gradle\caches\transforms-4\0addc0b6a9238aac843f3e7ce5ee3f8a\transformed\relinker-1.4.4\AndroidManifest.xml:5:5-43
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.4] C:\Users\xuxta\.gradle\caches\transforms-4\0addc0b6a9238aac843f3e7ce5ee3f8a\transformed\relinker-1.4.4\AndroidManifest.xml:5:5-43
+	android:targetSdkVersion
+		INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\PopSpot\app\src\main\AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d1225a798ddf76f12ec974b05d95ff4e\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d1225a798ddf76f12ec974b05d95ff4e\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d1225a798ddf76f12ec974b05d95ff4e\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\d1225a798ddf76f12ec974b05d95ff4e\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\b415f430f033ee414d0e87a636ae7add\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\b415f430f033ee414d0e87a636ae7add\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\xuxta\.gradle\caches\transforms-4\b415f430f033ee414d0e87a636ae7add\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+uses-feature#0x00020000
+ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:7:5-9:35
+	android:glEsVersion
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:8:9-41
+	android:required
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:9:9-32
+uses-feature#android.hardware.wifi
+ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:10:5-12:36
+	android:required
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:12:9-33
+	android:name
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:11:9-45
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:15:5-79
+	android:name
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:15:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:16:5-76
+	android:name
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:16:22-73
+activity#com.naver.maps.map.app.LegendActivity
+ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:19:9-23:51
+	android:label
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:22:13-52
+	android:configChanges
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:21:13-91
+	android:theme
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:23:13-48
+	android:name
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:20:13-65
+activity#com.naver.maps.map.app.LegalNoticeActivity
+ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:24:9-28:51
+	android:label
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:27:13-58
+	android:configChanges
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:26:13-91
+	android:theme
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:28:13-48
+	android:name
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:25:13-70
+activity#com.naver.maps.map.app.OpenSourceLicenseActivity
+ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:29:9-33:51
+	android:label
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:32:13-65
+	android:configChanges
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:31:13-91
+	android:theme
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:33:13-48
+	android:name
+		ADDED from [com.naver.maps:map-sdk:3.18.0] C:\Users\xuxta\.gradle\caches\transforms-4\c718a30ebccd45b1ee1f741537d3c4d3\transformed\map-sdk-3.18.0\AndroidManifest.xml:30:13-76
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\7e1001d335e3cd0594db28a1cfffe249\transformed\lifecycle-process-2.8.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\7e1001d335e3cd0594db28a1cfffe249\transformed\lifecycle-process-2.8.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\e6bfc4bed98439f3518bfd18446d4294\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\xuxta\.gradle\caches\transforms-4\e6bfc4bed98439f3518bfd18446d4294\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\xuxta\.gradle\caches\transforms-4\d8bbb3d7cc0be92d87b255ea57494826\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\7e1001d335e3cd0594db28a1cfffe249\transformed\lifecycle-process-2.8.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\7e1001d335e3cd0594db28a1cfffe249\transformed\lifecycle-process-2.8.1\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.1] C:\Users\xuxta\.gradle\caches\transforms-4\7e1001d335e3cd0594db28a1cfffe249\transformed\lifecycle-process-2.8.1\AndroidManifest.xml:30:17-78
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\c71e95563bc016c615dad862bd4f26a1\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\c71e95563bc016c615dad862bd4f26a1\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.0-alpha07] C:\Users\xuxta\.gradle\caches\transforms-4\c71e95563bc016c615dad862bd4f26a1\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+permission#com.popspot.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+uses-permission#com.popspot.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\xuxta\.gradle\caches\transforms-4\dd29e1eef1122ecd71385d07c3b1bbef\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\7bf7f185e1f2b3d7d32f1e7d59417487\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\7bf7f185e1f2b3d7d32f1e7d59417487\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\7bf7f185e1f2b3d7d32f1e7d59417487\transformed\room-runtime-2.6.1\AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\7bf7f185e1f2b3d7d32f1e7d59417487\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\xuxta\.gradle\caches\transforms-4\7bf7f185e1f2b3d7d32f1e7d59417487\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\xuxta\.gradle\caches\transforms-4\8f593c65ed1c10736f514a40b3012e78\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
