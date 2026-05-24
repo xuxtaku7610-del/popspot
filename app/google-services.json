@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "283132635617-2hg63pe1u9bsc3o68je8hb45mdssahr3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.popspot.app",
+            "certificate_hash": "fc952b3a2f115a1984471796935735f753d533e2"
+          }
+        },
+        {
           "client_id": "283132635617-atvlhm9nomf8g9cu08i31o3tbvsscr53.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
