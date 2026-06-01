@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -141,7 +142,8 @@ private fun EventListTopBar() {
         title = {
             Text(
                 text       = "공식 행사",
-                fontWeight = FontWeight.Bold
+                // 수정: 홈 스타일 통일 — Bold → SemiBold (letterSpacing은 titleLarge 스타일에서 자동 적용)
+                fontWeight = FontWeight.SemiBold
             )
         },
         actions = {
@@ -155,7 +157,9 @@ private fun EventListTopBar() {
         },
         colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
             containerColor = MaterialTheme.colorScheme.surface
-        )
+        ),
+        // 수정: 홈 스타일 통일 — 상단 여백 14dp로 축소
+        windowInsets = WindowInsets(top = 14.dp)
     )
 }
 
@@ -389,10 +393,11 @@ private fun EventCard(
                 Text(
                     text       = event.title,
                     style      = MaterialTheme.typography.bodySmall,
-                    fontWeight = FontWeight.Bold,
+                    // 수정: 홈 스타일 통일 — Bold → SemiBold
+                    fontWeight = FontWeight.SemiBold,
                     maxLines   = 2,
                     overflow   = TextOverflow.Ellipsis,
-                    modifier   = Modifier.height(36.dp)  // locks height for 2-line cap
+                    modifier   = Modifier.height(36.dp)
                 )
 
                 Spacer(modifier = Modifier.height(4.dp))

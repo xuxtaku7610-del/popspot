@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -119,7 +120,8 @@ private fun ScrapTopBar(
         title = {
             Text(
                 text       = "스크랩",
-                fontWeight = FontWeight.Bold
+                // 수정: 홈 스타일 통일 — Bold → SemiBold
+                fontWeight = FontWeight.SemiBold
             )
         },
         actions = {
@@ -133,7 +135,9 @@ private fun ScrapTopBar(
         },
         colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
             containerColor = MaterialTheme.colorScheme.surface
-        )
+        ),
+        // 수정: 홈 스타일 통일 — 상단 여백 14dp로 축소
+        windowInsets = WindowInsets(top = 14.dp)
     )
 }
 
@@ -244,11 +248,12 @@ private fun ScrapItemCard(
 
                 Spacer(modifier = Modifier.height(4.dp))
 
-                // Title — single-line clamp
+                // Title
                 Text(
                     text       = item.title,
                     style      = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.Bold,
+                    // 수정: 홈 스타일 통일 — Bold → SemiBold
+                    fontWeight = FontWeight.SemiBold,
                     maxLines   = 2,
                     overflow   = TextOverflow.Ellipsis
                 )

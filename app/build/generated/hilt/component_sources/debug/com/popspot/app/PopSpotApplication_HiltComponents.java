@@ -5,6 +5,7 @@ import com.popspot.app.data.di.NetworkModule;
 import com.popspot.app.presentation.detail.DetailViewModel_HiltModules;
 import com.popspot.app.presentation.event.EventListViewModel_HiltModules;
 import com.popspot.app.presentation.home.HomeViewModel_HiltModules;
+import com.popspot.app.presentation.mypage.MyPageViewModel_HiltModules;
 import com.popspot.app.presentation.popup.PopupFeedViewModel_HiltModules;
 import com.popspot.app.presentation.scrap.ScrapViewModel_HiltModules;
 import dagger.Binds;
@@ -164,6 +165,7 @@ public final class PopSpotApplication_HiltComponents {
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           HiltWrapper_SavedStateHandleModule.class,
           HomeViewModel_HiltModules.KeyModule.class,
+          MyPageViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
           PopupFeedViewModel_HiltModules.KeyModule.class,
@@ -207,6 +209,7 @@ public final class PopSpotApplication_HiltComponents {
           EventListViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           HomeViewModel_HiltModules.BindsModule.class,
+          MyPageViewModel_HiltModules.BindsModule.class,
           PopupFeedViewModel_HiltModules.BindsModule.class,
           ScrapViewModel_HiltModules.BindsModule.class
       }

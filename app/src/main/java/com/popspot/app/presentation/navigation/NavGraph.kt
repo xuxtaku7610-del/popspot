@@ -1,15 +1,9 @@
 package com.popspot.app.presentation.navigation
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -18,6 +12,7 @@ import androidx.navigation.navArgument
 import com.popspot.app.presentation.detail.DetailScreen
 import com.popspot.app.presentation.event.EventListScreen
 import com.popspot.app.presentation.home.HomeScreen
+import com.popspot.app.presentation.mypage.MyPageScreen
 import com.popspot.app.presentation.popup.PopupFeedScreen
 import com.popspot.app.presentation.scrap.ScrapScreen
 
@@ -50,7 +45,7 @@ fun NavGraph() {
             }
 
             composable(BottomNavItem.MyPage.route) {
-                MyPagePlaceholder()
+                MyPageScreen(navController = navController)
             }
 
             // Explicit navArgument declaration ensures SavedStateHandle["id"]
@@ -65,19 +60,3 @@ fun NavGraph() {
     }
 }
 
-// ─── MyPage placeholder ───────────────────────────────────────────────────────
-
-@Composable
-private fun MyPagePlaceholder() {
-    Box(
-        modifier         = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text       = "마이페이지",
-            style      = MaterialTheme.typography.titleMedium,
-            fontWeight = FontWeight.Bold,
-            color      = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.45f)
-        )
-    }
-}

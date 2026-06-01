@@ -8,16 +8,34 @@ import androidx.compose.ui.unit.sp
 
 val Typography = Typography(
     bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
+        fontFamily    = FontFamily.Default,
+        fontWeight    = FontWeight.Normal,
+        fontSize      = 16.sp,
+        lineHeight    = 24.sp,
         letterSpacing = 0.5.sp
     ),
+    // 수정 2: letterSpacing 추가 (22 × -0.02 = -0.44)
     titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.SemiBold,
-        fontSize = 22.sp,
-        lineHeight = 28.sp
+        fontFamily    = FontFamily.Default,
+        fontWeight    = FontWeight.SemiBold,
+        fontSize      = 22.sp,
+        lineHeight    = 28.sp,
+        letterSpacing = (-0.44).sp
+    ),
+    // 수정 2: SectionHeader에서 사용하는 titleMedium letterSpacing 추가 (16 × -0.02 = -0.32)
+    titleMedium = TextStyle(
+        fontFamily    = FontFamily.Default,
+        fontWeight    = FontWeight.SemiBold,
+        fontSize      = 16.sp,
+        lineHeight    = 24.sp,
+        letterSpacing = (-0.32).sp
+    ),
+    // 수정 2: 상단 앱바 위치 칩에서 사용하는 titleSmall letterSpacing 추가 (14 × -0.02 = -0.28)
+    titleSmall = TextStyle(
+        fontFamily    = FontFamily.Default,
+        fontWeight    = FontWeight.SemiBold,
+        fontSize      = 14.sp,
+        lineHeight    = 20.sp,
+        letterSpacing = (-0.28).sp
     )
 )

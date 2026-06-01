@@ -33,6 +33,8 @@ import com.popspot.app.presentation.event.EventListViewModel;
 import com.popspot.app.presentation.event.EventListViewModel_HiltModules;
 import com.popspot.app.presentation.home.HomeViewModel;
 import com.popspot.app.presentation.home.HomeViewModel_HiltModules;
+import com.popspot.app.presentation.mypage.MyPageViewModel;
+import com.popspot.app.presentation.mypage.MyPageViewModel_HiltModules;
 import com.popspot.app.presentation.popup.PopupFeedViewModel;
 import com.popspot.app.presentation.popup.PopupFeedViewModel_HiltModules;
 import com.popspot.app.presentation.scrap.ScrapViewModel;
@@ -399,7 +401,7 @@ public final class DaggerPopSpotApplication_HiltComponents_SingletonC {
 
     @Override
     public Map<Class<?>, Boolean> getViewModelKeys() {
-      return LazyClassKeyMap.<Boolean>of(MapBuilder.<String, Boolean>newMapBuilder(5).put(LazyClassKeyProvider.com_popspot_app_presentation_detail_DetailViewModel, DetailViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_popspot_app_presentation_event_EventListViewModel, EventListViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_popspot_app_presentation_home_HomeViewModel, HomeViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_popspot_app_presentation_popup_PopupFeedViewModel, PopupFeedViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_popspot_app_presentation_scrap_ScrapViewModel, ScrapViewModel_HiltModules.KeyModule.provide()).build());
+      return LazyClassKeyMap.<Boolean>of(MapBuilder.<String, Boolean>newMapBuilder(6).put(LazyClassKeyProvider.com_popspot_app_presentation_detail_DetailViewModel, DetailViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_popspot_app_presentation_event_EventListViewModel, EventListViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_popspot_app_presentation_home_HomeViewModel, HomeViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_popspot_app_presentation_mypage_MyPageViewModel, MyPageViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_popspot_app_presentation_popup_PopupFeedViewModel, PopupFeedViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_popspot_app_presentation_scrap_ScrapViewModel, ScrapViewModel_HiltModules.KeyModule.provide()).build());
     }
 
     @Override
@@ -419,21 +421,23 @@ public final class DaggerPopSpotApplication_HiltComponents_SingletonC {
 
     @IdentifierNameString
     private static final class LazyClassKeyProvider {
-      static String com_popspot_app_presentation_event_EventListViewModel = "com.popspot.app.presentation.event.EventListViewModel";
-
       static String com_popspot_app_presentation_popup_PopupFeedViewModel = "com.popspot.app.presentation.popup.PopupFeedViewModel";
+
+      static String com_popspot_app_presentation_home_HomeViewModel = "com.popspot.app.presentation.home.HomeViewModel";
 
       static String com_popspot_app_presentation_detail_DetailViewModel = "com.popspot.app.presentation.detail.DetailViewModel";
 
       static String com_popspot_app_presentation_scrap_ScrapViewModel = "com.popspot.app.presentation.scrap.ScrapViewModel";
 
-      static String com_popspot_app_presentation_home_HomeViewModel = "com.popspot.app.presentation.home.HomeViewModel";
+      static String com_popspot_app_presentation_event_EventListViewModel = "com.popspot.app.presentation.event.EventListViewModel";
 
-      @KeepFieldType
-      EventListViewModel com_popspot_app_presentation_event_EventListViewModel2;
+      static String com_popspot_app_presentation_mypage_MyPageViewModel = "com.popspot.app.presentation.mypage.MyPageViewModel";
 
       @KeepFieldType
       PopupFeedViewModel com_popspot_app_presentation_popup_PopupFeedViewModel2;
+
+      @KeepFieldType
+      HomeViewModel com_popspot_app_presentation_home_HomeViewModel2;
 
       @KeepFieldType
       DetailViewModel com_popspot_app_presentation_detail_DetailViewModel2;
@@ -442,7 +446,10 @@ public final class DaggerPopSpotApplication_HiltComponents_SingletonC {
       ScrapViewModel com_popspot_app_presentation_scrap_ScrapViewModel2;
 
       @KeepFieldType
-      HomeViewModel com_popspot_app_presentation_home_HomeViewModel2;
+      EventListViewModel com_popspot_app_presentation_event_EventListViewModel2;
+
+      @KeepFieldType
+      MyPageViewModel com_popspot_app_presentation_mypage_MyPageViewModel2;
     }
   }
 
@@ -460,6 +467,8 @@ public final class DaggerPopSpotApplication_HiltComponents_SingletonC {
     private Provider<EventListViewModel> eventListViewModelProvider;
 
     private Provider<HomeViewModel> homeViewModelProvider;
+
+    private Provider<MyPageViewModel> myPageViewModelProvider;
 
     private Provider<PopupFeedViewModel> popupFeedViewModelProvider;
 
@@ -493,13 +502,14 @@ public final class DaggerPopSpotApplication_HiltComponents_SingletonC {
       this.detailViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
       this.eventListViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
       this.homeViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
-      this.popupFeedViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
-      this.scrapViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
+      this.myPageViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
+      this.popupFeedViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
+      this.scrapViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 5);
     }
 
     @Override
     public Map<Class<?>, javax.inject.Provider<ViewModel>> getHiltViewModelMap() {
-      return LazyClassKeyMap.<javax.inject.Provider<ViewModel>>of(MapBuilder.<String, javax.inject.Provider<ViewModel>>newMapBuilder(5).put(LazyClassKeyProvider.com_popspot_app_presentation_detail_DetailViewModel, ((Provider) detailViewModelProvider)).put(LazyClassKeyProvider.com_popspot_app_presentation_event_EventListViewModel, ((Provider) eventListViewModelProvider)).put(LazyClassKeyProvider.com_popspot_app_presentation_home_HomeViewModel, ((Provider) homeViewModelProvider)).put(LazyClassKeyProvider.com_popspot_app_presentation_popup_PopupFeedViewModel, ((Provider) popupFeedViewModelProvider)).put(LazyClassKeyProvider.com_popspot_app_presentation_scrap_ScrapViewModel, ((Provider) scrapViewModelProvider)).build());
+      return LazyClassKeyMap.<javax.inject.Provider<ViewModel>>of(MapBuilder.<String, javax.inject.Provider<ViewModel>>newMapBuilder(6).put(LazyClassKeyProvider.com_popspot_app_presentation_detail_DetailViewModel, ((Provider) detailViewModelProvider)).put(LazyClassKeyProvider.com_popspot_app_presentation_event_EventListViewModel, ((Provider) eventListViewModelProvider)).put(LazyClassKeyProvider.com_popspot_app_presentation_home_HomeViewModel, ((Provider) homeViewModelProvider)).put(LazyClassKeyProvider.com_popspot_app_presentation_mypage_MyPageViewModel, ((Provider) myPageViewModelProvider)).put(LazyClassKeyProvider.com_popspot_app_presentation_popup_PopupFeedViewModel, ((Provider) popupFeedViewModelProvider)).put(LazyClassKeyProvider.com_popspot_app_presentation_scrap_ScrapViewModel, ((Provider) scrapViewModelProvider)).build());
     }
 
     @Override
@@ -509,30 +519,35 @@ public final class DaggerPopSpotApplication_HiltComponents_SingletonC {
 
     @IdentifierNameString
     private static final class LazyClassKeyProvider {
+      static String com_popspot_app_presentation_home_HomeViewModel = "com.popspot.app.presentation.home.HomeViewModel";
+
+      static String com_popspot_app_presentation_event_EventListViewModel = "com.popspot.app.presentation.event.EventListViewModel";
+
+      static String com_popspot_app_presentation_mypage_MyPageViewModel = "com.popspot.app.presentation.mypage.MyPageViewModel";
+
+      static String com_popspot_app_presentation_scrap_ScrapViewModel = "com.popspot.app.presentation.scrap.ScrapViewModel";
+
       static String com_popspot_app_presentation_detail_DetailViewModel = "com.popspot.app.presentation.detail.DetailViewModel";
 
       static String com_popspot_app_presentation_popup_PopupFeedViewModel = "com.popspot.app.presentation.popup.PopupFeedViewModel";
 
-      static String com_popspot_app_presentation_home_HomeViewModel = "com.popspot.app.presentation.home.HomeViewModel";
+      @KeepFieldType
+      HomeViewModel com_popspot_app_presentation_home_HomeViewModel2;
 
-      static String com_popspot_app_presentation_scrap_ScrapViewModel = "com.popspot.app.presentation.scrap.ScrapViewModel";
+      @KeepFieldType
+      EventListViewModel com_popspot_app_presentation_event_EventListViewModel2;
 
-      static String com_popspot_app_presentation_event_EventListViewModel = "com.popspot.app.presentation.event.EventListViewModel";
+      @KeepFieldType
+      MyPageViewModel com_popspot_app_presentation_mypage_MyPageViewModel2;
+
+      @KeepFieldType
+      ScrapViewModel com_popspot_app_presentation_scrap_ScrapViewModel2;
 
       @KeepFieldType
       DetailViewModel com_popspot_app_presentation_detail_DetailViewModel2;
 
       @KeepFieldType
       PopupFeedViewModel com_popspot_app_presentation_popup_PopupFeedViewModel2;
-
-      @KeepFieldType
-      HomeViewModel com_popspot_app_presentation_home_HomeViewModel2;
-
-      @KeepFieldType
-      ScrapViewModel com_popspot_app_presentation_scrap_ScrapViewModel2;
-
-      @KeepFieldType
-      EventListViewModel com_popspot_app_presentation_event_EventListViewModel2;
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -565,10 +580,13 @@ public final class DaggerPopSpotApplication_HiltComponents_SingletonC {
           case 2: // com.popspot.app.presentation.home.HomeViewModel 
           return (T) new HomeViewModel(new GetPopupStoresUseCase(), viewModelCImpl.getEventsUseCase());
 
-          case 3: // com.popspot.app.presentation.popup.PopupFeedViewModel 
+          case 3: // com.popspot.app.presentation.mypage.MyPageViewModel 
+          return (T) new MyPageViewModel(singletonCImpl.provideScrapRepositoryProvider.get());
+
+          case 4: // com.popspot.app.presentation.popup.PopupFeedViewModel 
           return (T) new PopupFeedViewModel(viewModelCImpl.getLatestPopupPostsUseCase());
 
-          case 4: // com.popspot.app.presentation.scrap.ScrapViewModel 
+          case 5: // com.popspot.app.presentation.scrap.ScrapViewModel 
           return (T) new ScrapViewModel(singletonCImpl.provideScrapRepositoryProvider.get());
 
           default: throw new AssertionError(id);

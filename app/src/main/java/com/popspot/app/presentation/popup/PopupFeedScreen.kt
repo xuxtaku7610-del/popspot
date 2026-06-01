@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -160,9 +161,11 @@ private fun PopupFeedTopBar(
         },
         title = {
             Text(
-                text       = "팝업 트렌드",
-                fontWeight = FontWeight.Bold,
-                fontSize   = 18.sp
+                text          = "팝업 트렌드",
+                // 수정: 홈 스타일 통일 — Bold → SemiBold, letterSpacing 추가 (18 × -0.02 = -0.36)
+                fontWeight    = FontWeight.SemiBold,
+                fontSize      = 18.sp,
+                letterSpacing = (-0.36).sp
             )
         },
         actions = {
@@ -175,7 +178,9 @@ private fun PopupFeedTopBar(
         },
         colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
             containerColor = MaterialTheme.colorScheme.surface
-        )
+        ),
+        // 수정: 홈 스타일 통일 — 상단 여백 14dp로 축소
+        windowInsets = WindowInsets(top = 14.dp)
     )
 }
 
@@ -317,11 +322,12 @@ private fun PopupPostCard(post: PopupPost) {
 
                 Spacer(modifier = Modifier.height(4.dp))
 
-                // Title — bold, one-line clamp
+                // Title — one-line clamp
                 Text(
                     text       = post.title,
                     style      = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.Bold,
+                    // 수정: 홈 스타일 통일 — Bold → SemiBold
+                    fontWeight = FontWeight.SemiBold,
                     maxLines   = 1,
                     overflow   = TextOverflow.Ellipsis
                 )
