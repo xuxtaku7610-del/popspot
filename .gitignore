@@ -4,7 +4,6 @@ build/
 app/build/
 *.iml
 local.properties
-gradle.properties
 popspot-release-key.jks
 .DS_Store
 *.log
