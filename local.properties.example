@@ -1,0 +1,20 @@
+# 이 파일을 복사해서 프로젝트 루트에 local.properties 이름으로 저장하세요.
+# 실제 키는 GitHub에 올리지 마세요.
+
+# 네이버 블로그 검색 API - developers.naver.com
+naver.client.id=YOUR_NAVER_SEARCH_CLIENT_ID
+naver.client.secret=YOUR_NAVER_SEARCH_CLIENT_SECRET
+
+# 네이버 지도 SDK Dynamic Map - console.ncloud.com
+# Naver Cloud Platform > Maps > Application Services > Maps에서 발급받는 NCP Key ID입니다.
+# 네이버 블로그 검색 Client ID와 다른 값일 수 있습니다.
+naver.map.client.id=YOUR_NCP_MAP_KEY_ID
+
+# 한국관광공사 TourAPI - data.go.kr
+tour.api.key=YOUR_TOUR_API_SERVICE_KEY
+
+# release .jks로 debug 빌드까지 같은 SHA-1로 서명하고 싶을 때만 입력
+# popspot-release-key.jks 파일은 app 폴더 또는 프로젝트 루트에 두면 됩니다.
+RELEASE_STORE_PASSWORD=YOUR_JKS_STORE_PASSWORD
+RELEASE_KEY_PASSWORD=YOUR_JKS_KEY_PASSWORD
+RELEASE_KEY_ALIAS=popspot-alias

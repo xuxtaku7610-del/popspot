@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "283132635617",
+    "project_id": "popspot-89c3c",
+    "storage_bucket": "popspot-89c3c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283132635617:android:b5bf4c7de246c5e95c8aa0",
+        "android_client_info": {
+          "package_name": "com.popspot.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283132635617-2hg63pe1u9bsc3o68je8hb45mdssahr3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.popspot.app",
+            "certificate_hash": "fc952b3a2f115a1984471796935735f753d533e2"
+          }
+        },
+        {
+          "client_id": "283132635617-atvlhm9nomf8g9cu08i31o3tbvsscr53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.popspot.app",
+            "certificate_hash": "ede756f331d00cfa33ebeb35aff2799a533bbed6"
+          }
+        },
+        {
+          "client_id": "283132635617-v8qc7t13cs7s861ubp9pnj6dios9hlu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWBTywLSXavBkAivG3QZgdtbcMny9TXoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283132635617-v8qc7t13cs7s861ubp9pnj6dios9hlu0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

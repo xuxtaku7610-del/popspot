@@ -1,0 +1,9 @@
+.gradle/
+.idea/
+build/
+app/build/
+*.iml
+local.properties
+popspot-release-key.jks
+.DS_Store
+*.log
