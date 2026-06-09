@@ -27,10 +27,24 @@
 |화면       |설명                            |
 |---------|------------------------------|
 |🏠 홈      |오늘의 핫플, 실시간 팝업 트렌드, 이번 주 공식 행사|
+<img width="256" height="564" alt="Image" src="https://github.com/user-attachments/assets/1e1da0d5-ee0b-4a04-bf03-c53f6862e416" />
+
+<img width="255" height="556" alt="Image" src="https://github.com/user-attachments/assets/aa40300d-a03b-47f3-922a-72970a11199a" />
+
+
 |🗺️ 팝업 드래프트|네이버 지도 기반 팝업스토어 위치 탐색         |
-|📅 공식 행사  |공공데이터 포털 기반 공식 행사 정보          |
+<img width="254" height="545" alt="Image" src="https://github.com/user-attachments/assets/cea1ab10-b559-4bff-afe9-0a00cb554067" />
+
+
+
+
+
 |🔖 스크랩    |관심 팝업스토어 저장 및 관리              |
+<img width="253" height="553" alt="Image" src="https://github.com/user-attachments/assets/d2eade57-0c41-4c07-a391-2dea44ca8c9a" />
 |👤 마이페이지  |사용자 설정 및 프로필 관리               |
+<img width="254" height="559" alt="Image" src="https://github.com/user-attachments/assets/0c1c380b-dfcc-40ef-bf23-410c6e453968" />
+
+<img width="234" height="499" alt="Image" src="https://github.com/user-attachments/assets/2a58c528-e6a7-4f90-8409-d49de1a2dc4e" />
 
 -----
 
