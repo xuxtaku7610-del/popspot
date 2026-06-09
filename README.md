@@ -192,7 +192,7 @@ app/
 
 1. [console.ncloud.com](https://console.ncloud.com) 가입 및 앱 등록
 1. Maps → Android SDK, Geocoding API 사용 신청
-1. 앱 등록 시 **Android SHA-1 지문 등록 필수**
+
 
 **공공데이터 포털**
 
