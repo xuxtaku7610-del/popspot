@@ -63,10 +63,16 @@ android {
             ?: localProperties.getProperty("NAVER_MAP_KEY_ID")
             ?: ""
 
+        val naverMapClientSecret = localProperties.getProperty("naver.map.client.secret")
+            ?: localProperties.getProperty("NAVER_MAP_CLIENT_SECRET")
+            ?: ""
+
+        buildConfigField("String", "NAVER_MAP_KEY_ID", "\"$naverMapKeyId\"")
+        buildConfigField("String", "NAVER_MAP_CLIENT_SECRET", "\"$naverMapClientSecret\"")
+
         buildConfigField("String", "NAVER_CLIENT_ID", "\"$naverClientId\"")
         buildConfigField("String", "NAVER_CLIENT_SECRET", "\"$naverClientSecret\"")
         buildConfigField("String", "TOUR_API_KEY", "\"$tourApiKey\"")
-        buildConfigField("String", "NAVER_MAP_KEY_ID", "\"$naverMapKeyId\"")
     }
 
     buildTypes {

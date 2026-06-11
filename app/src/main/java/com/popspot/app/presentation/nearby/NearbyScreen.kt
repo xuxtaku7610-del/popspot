@@ -1,9 +1,13 @@
 package com.popspot.app.presentation.nearby
 
-import android.location.Geocoder
+import android.Manifest
+import android.annotation.SuppressLint
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.view.ViewGroup
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -27,33 +31,52 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.core.content.ContextCompat
+import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.Priority
+import com.google.android.gms.tasks.CancellationTokenSource
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.CameraAnimation
 import com.naver.maps.map.CameraUpdate
 import com.naver.maps.map.MapView
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.overlay.Marker
-import kotlinx.coroutines.Dispatchers
+import com.popspot.app.BuildConfig
+import com.popspot.app.data.remote.api.NaverMapApi
+import okhttp3.OkHttpClient
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import java.util.Locale
 import kotlin.math.*
 
 private const val TAG = "MAP_SEARCH_SCREEN"
+
+// Retrofit 인스턴스를 외부에서 생성하여 리컴포지션 시 부하 방지
+private val naverMapApi by lazy {
+    Retrofit.Builder()
+        .baseUrl("https://naveropenapi.apigw.ntruss.com/")
+        .client(OkHttpClient.Builder().build())
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+        .create(NaverMapApi::class.java)
+}
 
 @Composable
 fun NearbyScreen(
     modifier: Modifier = Modifier
 ) {
+    Log.d(TAG, "NearbyScreen Composing...")
     val context = LocalContext.current
     val keyboardController = LocalSoftwareKeyboardController.current
     val coroutineScope = rememberCoroutineScope()
 
+    // 상태 관리
+    var myRealLocation by remember { mutableStateOf<LatLng?>(null) }
     var query by remember { mutableStateOf("") }
     var searchedLocationName by remember { mutableStateOf("울산") }
     var currentCenter by remember { mutableStateOf(LatLng(35.5384, 129.3114)) }
     var selectedPopup by remember { mutableStateOf<PopupPlace?>(null) }
-    var nearbyPopups by remember { mutableStateOf(findNearbyPopups(currentCenter)) }
+    var nearbyPopups by remember { mutableStateOf(emptyList<PopupPlace>()) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
     var isSearching by remember { mutableStateOf(false) }
 
@@ -61,39 +84,99 @@ fun NearbyScreen(
     val popupMarkers = remember { mutableStateListOf<Marker>() }
     var searchMarker by remember { mutableStateOf<Marker?>(null) }
 
-    val mapView = remember {
-        MapView(context).apply {
-            layoutParams = ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.MATCH_PARENT
-            )
-            onCreate(Bundle())
+    // 위치 클라이언트
+    val fusedLocationClient = remember { LocationServices.getFusedLocationProviderClient(context) }
+
+    // 권한 요청 런처
+    val requestPermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { permissions ->
+        val granted = permissions[Manifest.permission.ACCESS_FINE_LOCATION] == true ||
+                      permissions[Manifest.permission.ACCESS_COARSE_LOCATION] == true
+        if (granted) {
+            try {
+                fusedLocationClient
+                    .getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, CancellationTokenSource().token)
+                    .addOnSuccessListener { location ->
+                        if (location != null) {
+                            myRealLocation = LatLng(location.latitude, location.longitude)
+                            Log.d(TAG, "Current GPS acquired: ${location.latitude}, ${location.longitude}")
+                        } else {
+                            fusedLocationClient.lastLocation.addOnSuccessListener { lastLocation ->
+                                lastLocation?.let {
+                                    myRealLocation = LatLng(it.latitude, it.longitude)
+                                    Log.d(TAG, "Last GPS acquired: ${it.latitude}, ${it.longitude}")
+                                }
+                            }
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+                        Log.e(TAG, "Current location request failed", exception)
+                    }
+            } catch (e: SecurityException) { Log.e(TAG, "Loc Error", e) }
         }
     }
 
+    // 초기 권한 체크 및 데이터 로드
+    LaunchedEffect(Unit) {
+        val hasPermission = ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+        if (hasPermission) {
+            try {
+                fusedLocationClient
+                    .getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, CancellationTokenSource().token)
+                    .addOnSuccessListener { location ->
+                        if (location != null) {
+                            myRealLocation = LatLng(location.latitude, location.longitude)
+                            Log.d(TAG, "Initial current location: ${location.latitude}, ${location.longitude}")
+                        } else {
+                            fusedLocationClient.lastLocation.addOnSuccessListener { lastLocation ->
+                                lastLocation?.let {
+                                    myRealLocation = LatLng(it.latitude, it.longitude)
+                                    Log.d(TAG, "Initial last location: ${it.latitude}, ${it.longitude}")
+                                }
+                            }
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+                        Log.e(TAG, "Initial current location request failed", exception)
+                    }
+            } catch (e: SecurityException) { Log.e(TAG, "Initial loc error", e) }
+        } else {
+            requestPermissionLauncher.launch(arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION))
+        }
+
+        // 초기 데이터 로딩
+        nearbyPopups = queryPopupPlaces(distanceFrom = myRealLocation)
+    }
+
+    // 내 위치가 확보되면 지도를 내 위치로 이동하고, 카드 거리를 내 위치 기준으로 다시 계산한다.
+    LaunchedEffect(myRealLocation, naverMapRef) {
+        myRealLocation?.let { location ->
+            Log.d(TAG, "Updating map and distances based on real location: $location")
+            currentCenter = location
+            searchedLocationName = "내 위치"
+
+            val map = naverMapRef
+            val bounds = runCatching { map?.contentBounds?.toMapBounds() }.getOrNull()
+            nearbyPopups = queryPopupPlaces(distanceFrom = location, bounds = bounds)
+
+            map?.moveCamera(
+                CameraUpdate.scrollAndZoomTo(location, 14.5)
+                    .animate(CameraAnimation.Easing)
+            )
+        }
+    }
+
+    // 내부 함수들
     fun clearPopupMarkers() {
         popupMarkers.forEach { it.map = null }
         popupMarkers.clear()
     }
 
-    fun renderMarkers(
-        naverMap: NaverMap,
-        center: LatLng,
-        locationName: String,
-        popups: List<PopupPlace>
-    ) {
+    fun renderMarkers(naverMap: NaverMap, popups: List<PopupPlace>) {
         clearPopupMarkers()
-
-        searchMarker?.map = null
-        searchMarker = Marker().apply {
-            position = center
-            captionText = locationName
-            subCaptionText = "검색 위치"
-            map = naverMap
-        }
-
         popups.forEach { popup ->
-            val marker = Marker().apply {
+            Marker().apply {
                 position = LatLng(popup.latitude, popup.longitude)
                 captionText = popup.name
                 subCaptionText = popup.category
@@ -101,118 +184,104 @@ fun NearbyScreen(
                 height = 110
                 setOnClickListener {
                     selectedPopup = popup
-                    naverMap.moveCamera(
-                        CameraUpdate.scrollAndZoomTo(
-                            LatLng(popup.latitude, popup.longitude),
-                            15.5
-                        ).animate(CameraAnimation.Easing)
-                    )
+                    naverMap.moveCamera(CameraUpdate.scrollAndZoomTo(position, 15.5).animate(CameraAnimation.Easing))
                     true
                 }
                 map = naverMap
+                popupMarkers.add(this)
             }
-            popupMarkers.add(marker)
         }
     }
 
-    fun moveToLocation(
-        naverMap: NaverMap,
-        center: LatLng,
-        locationName: String
-    ) {
+    fun updateSearchMarker(naverMap: NaverMap, position: LatLng, name: String) {
+        searchMarker?.map = null
+        searchMarker = Marker().apply {
+            this.position = position
+            captionText = name
+            subCaptionText = "검색 위치"
+            map = naverMap
+        }
+    }
+
+    fun moveToLocation(naverMap: NaverMap, center: LatLng, name: String, moveCamera: Boolean = true) {
         currentCenter = center
-        searchedLocationName = locationName
+        searchedLocationName = name
         selectedPopup = null
+        
+        val bounds = runCatching { naverMap.contentBounds.toMapBounds() }.getOrNull()
+        val found = queryPopupPlaces(distanceFrom = myRealLocation, bounds = bounds)
+        nearbyPopups = found
 
-        val foundPopups = findNearbyPopups(center)
-        nearbyPopups = foundPopups
+        if (moveCamera) {
+            naverMap.moveCamera(CameraUpdate.scrollAndZoomTo(center, 14.5).animate(CameraAnimation.Easing))
+        }
+        updateSearchMarker(naverMap, center, name)
+        renderMarkers(naverMap, found)
+    }
 
-        naverMap.moveCamera(
-            CameraUpdate.scrollAndZoomTo(center, 14.5)
-                .animate(CameraAnimation.Easing)
-        )
-
-        renderMarkers(
-            naverMap = naverMap,
-            center = center,
-            locationName = locationName,
-            popups = foundPopups
-        )
+    fun refreshByVisibleArea(naverMap: NaverMap, name: String? = null) {
+        val center = naverMap.cameraPosition.target
+        val bounds = runCatching { naverMap.contentBounds.toMapBounds() }.getOrNull()
+        val found = queryPopupPlaces(distanceFrom = myRealLocation, bounds = bounds)
+        
+        currentCenter = center
+        searchedLocationName = name ?: searchedLocationName
+        nearbyPopups = found
+        renderMarkers(naverMap, found)
     }
 
     fun searchLocation() {
-        val keyword = query.trim()
-        if (keyword.isBlank()) {
-            errorMessage = "검색어를 입력해줘."
-            return
-        }
-
-        val map = naverMapRef
-        if (map == null) {
-            errorMessage = "지도가 아직 준비되지 않았어."
-            return
-        }
-
+        val kw = query.trim()
+        if (kw.isBlank()) return
+        val map = naverMapRef ?: return
+        
         keyboardController?.hide()
         isSearching = true
         errorMessage = null
 
         coroutineScope.launch {
-            val result = geocodeAddress(
-                geocoder = Geocoder(context, Locale.KOREA),
-                keyword = keyword
-            ) ?: fallbackGeocode(keyword)
-
+            var res = geocodeWithNaver(naverMapApi, kw) ?: fallbackGeocode(kw)
             isSearching = false
-
-            if (result == null) {
-                errorMessage = "주소나 지역을 찾지 못했어. 예: 울산, 성수, 홍대, 강남"
-                return@launch
+            if (res == null) {
+                errorMessage = "위치를 찾지 못했어. (예: 성수, 홍대, 울산)"
+            } else {
+                moveToLocation(map, res.latLng, res.name)
             }
-
-            moveToLocation(
-                naverMap = map,
-                center = result.latLng,
-                locationName = result.name
-            )
         }
     }
 
-    DisposableEffect(mapView) {
-        mapView.onStart()
-        mapView.onResume()
-
-        mapView.getMapAsync { naverMap ->
-            Log.d(TAG, "Official MapView ready")
-
-            naverMapRef = naverMap
-
-            naverMap.uiSettings.isZoomControlEnabled = true
-            naverMap.uiSettings.isLocationButtonEnabled = false
-            naverMap.uiSettings.isCompassEnabled = true
-            naverMap.uiSettings.isScaleBarEnabled = true
-
-            moveToLocation(
-                naverMap = naverMap,
-                center = currentCenter,
-                locationName = searchedLocationName
-            )
-        }
-
-        onDispose {
-            clearPopupMarkers()
-            searchMarker?.map = null
-            mapView.onPause()
-            mapView.onStop()
-        }
-    }
-
-    Box(
-        modifier = modifier.fillMaxSize()
-    ) {
+    Box(modifier = modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
         AndroidView(
             modifier = Modifier.fillMaxSize(),
-            factory = { mapView }
+            factory = { ctx ->
+                MapView(ctx).apply {
+                    onCreate(Bundle())
+                    getMapAsync { naverMap ->
+                        naverMapRef = naverMap
+                        naverMap.uiSettings.apply {
+                            isZoomControlEnabled = true
+                            isLocationButtonEnabled = false
+                        }
+                        moveToLocation(naverMap, currentCenter, searchedLocationName)
+
+                        naverMap.addOnCameraIdleListener {
+                            coroutineScope.launch {
+                                val addr = reverseGeocodeWithNaver(naverMapApi, naverMap.cameraPosition.target)
+                                refreshByVisibleArea(naverMap, addr)
+                            }
+                        }
+                        naverMap.setOnMapClickListener { _, latLng ->
+                            coroutineScope.launch {
+                                val addr = reverseGeocodeWithNaver(naverMapApi, latLng)
+                                moveToLocation(naverMap, latLng, addr)
+                            }
+                        }
+                    }
+                }
+            },
+            update = { view ->
+                // 필요 시 업데이트 로직
+            }
         )
 
         MapSearchPanel(
@@ -224,24 +293,18 @@ fun NearbyScreen(
         )
 
         NearbyPopupPanel(
-            modifier = Modifier
-                .align(Alignment.BottomCenter)
-                .fillMaxWidth(),
+            modifier = Modifier.align(Alignment.BottomCenter).fillMaxWidth(),
             locationName = searchedLocationName,
             popups = nearbyPopups,
             selectedPopup = selectedPopup,
             onPopupClick = { popup ->
                 selectedPopup = popup
-                naverMapRef?.moveCamera(
-                    CameraUpdate.scrollAndZoomTo(
-                        LatLng(popup.latitude, popup.longitude),
-                        15.5
-                    ).animate(CameraAnimation.Easing)
-                )
+                naverMapRef?.moveCamera(CameraUpdate.scrollAndZoomTo(LatLng(popup.latitude, popup.longitude), 15.5).animate(CameraAnimation.Easing))
             }
         )
     }
 }
+
 
 @Composable
 private fun MapSearchPanel(
@@ -443,7 +506,11 @@ private fun PopupPlaceCard(
             Spacer(modifier = Modifier.height(6.dp))
 
             Text(
-                text = "거리 약 ${"%.1f".format(popup.distanceKm)}km",
+                text = if (popup.distanceKm.isNaN()) {
+                    "현재 위치 확인 후 거리 표시"
+                } else {
+                    "내 위치에서 약 ${"%.1f".format(popup.distanceKm)}km"
+                },
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -466,71 +533,146 @@ private data class PopupPlace(
     val distanceKm: Double = 0.0
 )
 
-@Suppress("DEPRECATION")
-private suspend fun geocodeAddress(
-    geocoder: Geocoder,
-    keyword: String
-): GeocodeResult? = withContext(Dispatchers.IO) {
-    runCatching {
-        val result = geocoder.getFromLocationName(keyword, 1)
-            ?.firstOrNull()
-
-        result?.let {
-            GeocodeResult(
-                name = keyword,
-                latLng = LatLng(it.latitude, it.longitude)
-            )
+private data class MapBounds(
+    val southWestLat: Double,
+    val southWestLng: Double,
+    val northEastLat: Double,
+    val northEastLng: Double
+) {
+    fun contains(latitude: Double, longitude: Double): Boolean {
+        val latInRange = latitude in southWestLat..northEastLat
+        val lngInRange = if (southWestLng <= northEastLng) {
+            longitude in southWestLng..northEastLng
+        } else {
+            // 지도 화면이 180도 경도선을 걸칠 때 대비
+            longitude >= southWestLng || longitude <= northEastLng
         }
-    }.getOrNull()
+        return latInRange && lngInRange
+    }
 }
 
-private fun fallbackGeocode(keyword: String): GeocodeResult? {
-    val normalized = keyword.trim().lowercase()
+private fun com.naver.maps.geometry.LatLngBounds.toMapBounds(): MapBounds = MapBounds(
+    southWestLat = southWest.latitude,
+    southWestLng = southWest.longitude,
+    northEastLat = northEast.latitude,
+    northEastLng = northEast.longitude
+)
 
-    val locations = mapOf(
-        "울산" to LatLng(35.5384, 129.3114),
-        "울산대" to LatLng(35.5438, 129.2564),
-        "삼산" to LatLng(35.5396, 129.3358),
-        "성남동" to LatLng(35.5547, 129.3203),
-        "서울" to LatLng(37.5665, 126.9780),
-        "성수" to LatLng(37.5446, 127.0557),
-        "홍대" to LatLng(37.5571, 126.9245),
-        "강남" to LatLng(37.4979, 127.0276),
-        "잠실" to LatLng(37.5133, 127.1002),
-        "부산" to LatLng(35.1796, 129.0756),
-        "서면" to LatLng(35.1577, 129.0592),
-        "해운대" to LatLng(35.1631, 129.1635),
-        "대구" to LatLng(35.8714, 128.6014),
-        "대전" to LatLng(36.3504, 127.3845),
-        "광주" to LatLng(35.1595, 126.8526),
-        "인천" to LatLng(37.4563, 126.7052),
-        "제주" to LatLng(33.4996, 126.5312)
-    )
+private suspend fun geocodeWithNaver(
+    api: NaverMapApi,
+    keyword: String
+): GeocodeResult? {
+    return runCatching {
+        val response = api.geocodeAddress(
+            clientId = BuildConfig.NAVER_MAP_KEY_ID,
+            clientSecret = BuildConfig.NAVER_MAP_CLIENT_SECRET,
+            address = keyword
+        )
 
-    val matched = locations.entries.firstOrNull {
-        normalized.contains(it.key.lowercase())
-    } ?: return null
+        val first = response.addresses.firstOrNull() ?: return null
+        val latitude = first.latitude.toDoubleOrNull() ?: return null
+        val longitude = first.longitude.toDoubleOrNull() ?: return null
 
-    return GeocodeResult(
-        name = matched.key,
-        latLng = matched.value
-    )
+        GeocodeResult(
+            name = first.roadAddress.ifBlank { first.jibunAddress.ifBlank { keyword } },
+            latLng = LatLng(latitude, longitude)
+        )
+    }.getOrElse { exception ->
+        Log.e(TAG, "Naver geocoding failed", exception)
+        null
+    }
+}
+
+private suspend fun reverseGeocodeWithNaver(
+    api: NaverMapApi,
+    latLng: LatLng
+): String {
+    return runCatching {
+        val response = api.reverseGeocode(
+            clientId = BuildConfig.NAVER_MAP_KEY_ID,
+            clientSecret = BuildConfig.NAVER_MAP_CLIENT_SECRET,
+            coords = "${latLng.longitude},${latLng.latitude}"
+        )
+
+        val result = response.results.firstOrNull() ?: return "현재 지도 위치"
+        val region = result.region
+        val land = result.land
+
+        val areaText = listOfNotNull(
+            region?.area1?.name,
+            region?.area2?.name,
+            region?.area3?.name,
+            region?.area4?.name
+        )
+            .filter { it.isNotBlank() }
+            .joinToString(" ")
+
+        val landText = buildString {
+            if (!land?.name.isNullOrBlank()) append(land?.name)
+            if (!land?.number1.isNullOrBlank()) {
+                if (isNotBlank()) append(" ")
+                append(land?.number1)
+            }
+            if (!land?.number2.isNullOrBlank()) {
+                append("-")
+                append(land?.number2)
+            }
+        }
+
+        listOf(areaText, landText)
+            .filter { it.isNotBlank() }
+            .joinToString(" ")
+            .ifBlank { "현재 지도 위치" }
+    }.getOrElse { exception ->
+        Log.e(TAG, "Naver reverse geocoding failed", exception)
+        "현재 지도 위치"
+    }
+}
+
+private fun queryPopupPlaces(
+    keyword: String? = null,
+    distanceFrom: LatLng? = null,
+    bounds: MapBounds? = null
+): List<PopupPlace> {
+    val trimmedKeyword = keyword?.trim().orEmpty()
+
+    return samplePopupPlaces
+        .asSequence()
+        // 요구사항 2: keyword는 선택 파라미터. 비어 있으면 필터하지 않음.
+        .filter { popup ->
+            trimmedKeyword.isBlank() ||
+                    popup.name.contains(trimmedKeyword, ignoreCase = true) ||
+                    popup.category.contains(trimmedKeyword, ignoreCase = true) ||
+                    popup.address.contains(trimmedKeyword, ignoreCase = true)
+        }
+        // 요구사항 1 + BBox: 현재 지도 화면 사각형 영역 안의 데이터만 표시
+        .filter { popup ->
+            bounds == null || bounds.contains(popup.latitude, popup.longitude)
+        }
+        .map { popup ->
+            if (distanceFrom == null) {
+                popup.copy(distanceKm = Double.NaN)
+            } else {
+                popup.copy(
+                    distanceKm = distanceKm(
+                        lat1 = distanceFrom.latitude,
+                        lon1 = distanceFrom.longitude,
+                        lat2 = popup.latitude,
+                        lon2 = popup.longitude
+                    )
+                )
+            }
+        }
+        .toList()
+        .let { list ->
+            // 지도 이동 위치가 아니라 내 현재 위치가 있을 때만 거리순 정렬
+            if (distanceFrom != null) list.sortedBy { it.distanceKm } else list
+        }
 }
 
 private fun findNearbyPopups(center: LatLng): List<PopupPlace> {
-    return samplePopupPlaces
-        .map { popup ->
-            popup.copy(
-                distanceKm = distanceKm(
-                    lat1 = center.latitude,
-                    lon1 = center.longitude,
-                    lat2 = popup.latitude,
-                    lon2 = popup.longitude
-                )
-            )
-        }
+    return queryPopupPlaces(distanceFrom = center)
         .filter { it.distanceKm <= 5.0 }
-        .sortedBy { it.distanceKm }
 }
 
 private fun distanceKm(
@@ -636,3 +778,27 @@ private val samplePopupPlaces = listOf(
         longitude = 129.1635
     )
 )
+
+private fun fallbackGeocode(keyword: String): GeocodeResult? {
+    val normalized = keyword.trim().lowercase()
+    val locations = mapOf(
+        "울산" to LatLng(35.5384, 129.3114),
+        "성남동" to LatLng(35.5547, 129.3203),
+        "삼산" to LatLng(35.5396, 129.3358),
+        "성수" to LatLng(37.5446, 127.0557),
+        "홍대" to LatLng(37.5571, 126.9245),
+        "강남" to LatLng(37.4979, 127.0276),
+        "잠실" to LatLng(37.5133, 127.1002),
+        "부산" to LatLng(35.1796, 129.0756),
+        "제주" to LatLng(33.4996, 126.5312)
+    )
+
+    val matched = locations.entries.firstOrNull {
+        normalized.contains(it.key.lowercase())
+    } ?: return null
+
+    return GeocodeResult(
+        name = matched.key,
+        latLng = matched.value
+    )
+}
