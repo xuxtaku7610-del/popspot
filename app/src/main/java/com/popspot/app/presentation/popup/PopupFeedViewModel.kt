@@ -3,13 +3,17 @@ package com.popspot.app.presentation.popup
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.popspot.app.domain.model.PopupPost
+import com.popspot.app.domain.model.ScrapItem
+import com.popspot.app.domain.repository.ScrapRepository
 import com.popspot.app.domain.usecase.GetLatestPopupPostsUseCase
+import com.popspot.app.domain.usecase.ToggleScrapUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -24,7 +28,9 @@ data class PopupFeedUiState(
 
 @HiltViewModel
 class PopupFeedViewModel @Inject constructor(
-    private val getLatestPopupPostsUseCase: GetLatestPopupPostsUseCase
+    private val getLatestPopupPostsUseCase: GetLatestPopupPostsUseCase,
+    private val toggleScrapUseCase: ToggleScrapUseCase,
+    scrapRepository: ScrapRepository
 ) : ViewModel() {
 
     // NOTE: spec says List<Event> but PopupPost is used here because:
@@ -40,6 +46,15 @@ class PopupFeedViewModel @Inject constructor(
 
     private val _selectedChip = MutableStateFlow("전체")
     val selectedChip: StateFlow<String> = _selectedChip.asStateFlow()
+
+    // Room에 저장된 스크랩 id 목록. 팝업 카드의 하트 상태를 표시하는 데 사용한다.
+    val scrappedIds: StateFlow<Set<String>> = scrapRepository.getAllScraps()
+        .map { scraps -> scraps.map { it.id }.toSet() }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5_000),
+            initialValue = emptySet()
+        )
 
     // Derived StateFlow — recomputed whenever posts, query, or chip changes.
     // `WhileSubscribed(5_000)` cancels the upstream after 5 s with no collectors
@@ -77,6 +92,21 @@ class PopupFeedViewModel @Inject constructor(
 
     fun onChipSelected(chip: String) {
         _selectedChip.value = chip
+    }
+
+    fun toggleScrap(post: PopupPost) {
+        viewModelScope.launch {
+            toggleScrapUseCase(
+                ScrapItem(
+                    id = post.id,
+                    title = post.title,
+                    source = "NAVER_BLOG",
+                    imageUrl = "",
+                    date = post.postDate,
+                    link = post.link
+                )
+            )
+        }
     }
 
     private fun loadPosts() {

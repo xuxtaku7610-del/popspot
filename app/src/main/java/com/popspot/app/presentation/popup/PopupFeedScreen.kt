@@ -24,13 +24,16 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
@@ -80,6 +83,7 @@ fun PopupFeedScreen(
     val searchQuery by viewModel.searchQuery.collectAsState()
     val selectedChip by viewModel.selectedChip.collectAsState()
     val filteredItems by viewModel.filteredItems.collectAsState()
+    val scrappedIds by viewModel.scrappedIds.collectAsState()
 
     val searchFocusRequester = remember { FocusRequester() }
 
@@ -139,6 +143,8 @@ fun PopupFeedScreen(
                 else -> {
                     PostList(
                         posts = filteredItems,
+                        scrappedIds = scrappedIds,
+                        onScrapClick = viewModel::toggleScrap,
                         modifier = Modifier.weight(1f)
                     )
                 }
@@ -241,6 +247,8 @@ private fun ChipRow(
 @Composable
 private fun PostList(
     posts: List<PopupPost>,
+    scrappedIds: Set<String>,
+    onScrapClick: (PopupPost) -> Unit,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(
@@ -249,13 +257,21 @@ private fun PostList(
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         items(posts, key = { it.id }) { post ->
-            PopupPostCard(post = post)
+            PopupPostCard(
+                post = post,
+                isScrapped = scrappedIds.contains(post.id),
+                onScrapClick = { onScrapClick(post) }
+            )
         }
     }
 }
 
 @Composable
-private fun PopupPostCard(post: PopupPost) {
+private fun PopupPostCard(
+    post: PopupPost,
+    isScrapped: Boolean,
+    onScrapClick: () -> Unit
+) {
     val context = LocalContext.current
 
     Card(
@@ -335,21 +351,35 @@ private fun PopupPostCard(post: PopupPost) {
                         }
                     }
 
-                    TextButton(
-                        onClick = {
-                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(post.link))
-                            context.startActivity(intent)
-                        },
-                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
-                        border = BorderStroke(1.dp, Purple),
-                        shape = RoundedCornerShape(6.dp)
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
-                        Text(
-                            text = "원문보기 ↗",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = Purple,
-                            fontWeight = FontWeight.SemiBold
-                        )
+                        IconButton(onClick = onScrapClick) {
+                            Icon(
+                                imageVector = if (isScrapped) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
+                                contentDescription = if (isScrapped) "스크랩 해제" else "스크랩",
+                                tint = if (isScrapped) Purple else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.45f),
+                                modifier = Modifier.size(22.dp)
+                            )
+                        }
+
+                        TextButton(
+                            onClick = {
+                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(post.link))
+                                context.startActivity(intent)
+                            },
+                            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+                            border = BorderStroke(1.dp, Purple),
+                            shape = RoundedCornerShape(6.dp)
+                        ) {
+                            Text(
+                                text = "원문보기 ↗",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = Purple,
+                                fontWeight = FontWeight.SemiBold
+                            )
+                        }
                     }
                 }
             }
