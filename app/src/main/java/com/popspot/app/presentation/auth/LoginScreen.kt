@@ -70,6 +70,14 @@ fun LoginScreen(
                 ) {
                     Text(text = "구글 계정으로 로그인", fontWeight = FontWeight.Bold)
                 }
+                uiState.error?.let { error ->
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Text(
+                        text = error,
+                        color = MaterialTheme.colorScheme.error,
+                        fontSize = 13.sp
+                    )
+                }
 
                 Spacer(modifier = Modifier.height(12.dp))
 

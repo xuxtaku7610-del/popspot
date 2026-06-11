@@ -25,13 +25,26 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.popspot.app.presentation.auth.AuthViewModel
+import com.popspot.app.presentation.auth.LoginScreen
 
 @Composable
 fun MyPageScreen(viewModel: AuthViewModel) {
     val uiState by viewModel.uiState.collectAsState()
 
-    val userName = uiState.user?.displayName ?: "사용자"
-    val userEmail = uiState.user?.email ?: "user@popspot.com"
+    val user = uiState.user
+    if (user == null) {
+        LoginScreen(
+            viewModel = viewModel,
+            onGuestClick = {
+                // 비회원으로 둘러보기 누르면 게스트 마이페이지를 보여주고 싶을 때 사용
+                // 지금은 비워둬도 됨
+            }
+        )
+        return
+    }
+
+    val userName = user.displayName ?: "사용자"
+    val userEmail = user.email ?: "user@popspot.com"
     val userTags = uiState.userTags
 
     Column(
@@ -90,7 +103,6 @@ fun MyPageScreen(viewModel: AuthViewModel) {
         Spacer(modifier = Modifier.height(40.dp))
     }
 }
-
 @Composable
 private fun MyPageProfileCard(userName: String, userEmail: String, userTags: List<String>) {
     Card(
